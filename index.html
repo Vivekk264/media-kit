@@ -8,15 +8,15 @@
 <meta property="og:title" content="Quora Kagaj · Cricket Content Creator, Dubai">
 <meta property="og:description" content="28.8M views in 30 days. Matchday reels, player moments and fan culture from the UAE's biggest cricket events.">
 <meta property="og:image" content="hero.jpg">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='44' fill='%23C8322A'/><path d='M22 38c18 8 38 8 56 0M22 62c18-8 38-8 56 0' stroke='%23fff' stroke-width='4' fill='none'/></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='44' fill='%23B4492A'/><path d='M22 38c18 8 38 8 56 0M22 62c18-8 38-8 56 0' stroke='%23fff' stroke-width='4' fill='none'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@800;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#F7F3EA; --paper-2:#EEE7D8; --card:#FFFFFF; --navy:#0E1A2B; --navy-2:#1A283E;
-  --ink:#0E1A2B; --muted:#4A5466; --line:#E0D7C4; --red:#C8322A; --red-dark:#9E231D; --soft:#E7DECB; --gold:#E8A93A;
-  --display:Anton,Impact,"Arial Narrow",sans-serif; --body:Manrope,"Segoe UI",Helvetica,Arial,sans-serif;
+  --paper:#F7F0E4; --paper-2:#EFE5D3; --card:#FFFDF8; --navy:#2A1A12; --navy-2:#3A271D;
+  --ink:#2A1A12; --muted:#5E4A3C; --line:#DCCFB9; --red:#B4492A; --red-dark:#8A3319; --soft:#E7DECB; --gold:#E8A93A;
+  --display:Rubik,"Arial Black",Arial,sans-serif; --body:"DM Sans","Segoe UI",Helvetica,Arial,sans-serif;
   --r-lg:22px; --r-md:16px; --r-sm:10px;
 }
 *{box-sizing:border-box}
@@ -189,6 +189,41 @@ h1,h2,h3{margin:0;font-weight:400}
 @media (max-width:760px){.contact .wrap{grid-template-columns:1fr}.qr{justify-self:start}}
 footer{background:var(--red-dark);color:#FFDCD8;font-size:14px;padding:20px 0 calc(20px + env(safe-area-inset-bottom,0px))}
 @media (max-width:640px){section{padding:68px 0}.hero{padding:44px 0 64px}}
+
+/* ===== Warm bold theme ===== */
+h1,.h2,.hero h1,.feature h3,.ev h3,.pkg h3,.bg h3,.trio b,.stat b,.badge,.brand{font-family:var(--display);font-weight:900;letter-spacing:-.035em}
+.hero h1{font-size:clamp(52px,7.4vw,104px);line-height:.95}
+.h2{font-size:clamp(36px,4.6vw,60px);line-height:1}
+.contact .h2{font-size:clamp(44px,6.4vw,88px)}
+.wcl .h2{font-size:clamp(38px,5.2vw,68px)}
+.ev h3{font-size:28px;line-height:1.05}.pkg h3{font-size:32px}.feature h3{font-size:clamp(32px,3.6vw,48px)}
+.brand{font-size:26px}
+.ball{background:var(--red);box-shadow:inset 0 0 0 3px #D9744F}
+.btn{border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+.btn:active{transform:translate(4px,4px);box-shadow:0 0 0 var(--ink)}
+.btn-line{background:var(--card);color:var(--ink)!important}
+.tv .btn,.wcl .btn,.why .btn{border-color:#140C08;box-shadow:4px 4px 0 #140C08}
+.nav{background:rgba(247,240,228,.94)}
+.nav .btn{box-shadow:3px 3px 0 var(--ink)}
+.kicker{border:1.5px solid var(--ink)}
+.hero-photo img,.wcl img{border:2px solid var(--ink);box-shadow:8px 8px 0 var(--ink)}
+.wcl img{border-color:#140C08;box-shadow:8px 8px 0 #140C08}
+.trio{background:var(--paper-2);border:0;border-top:1.5px solid var(--line);border-bottom:1.5px solid var(--line);width:100%;max-width:none;padding-inline:max(5vw,calc((100% - 1200px)/2))}
+.stat,.ev,.pkg{border:2px solid var(--ink);box-shadow:6px 6px 0 var(--ink);border-radius:18px}
+.stat.hl{border-color:var(--ink)}
+.pkg.pop{border-color:var(--ink)}
+.ev.next{background:var(--red);border-color:var(--ink)}.ev.next small{color:#FFE2D2}.ev.next p{color:#FFE9DF}
+.tv-card{border:1.5px solid #4A3325}
+.reel img,.m video,.m img{border:1.5px solid var(--ink)}
+.chip{border:2px solid var(--ink)}
+.chip[aria-pressed="true"]{background:var(--red);border-color:var(--ink);box-shadow:3px 3px 0 var(--ink)}
+.faq details{border-bottom:1.5px solid var(--line)}
+.qr{border:2px solid var(--ink);box-shadow:6px 6px 0 var(--ink)}
+.feature{border:2px solid var(--ink);box-shadow:8px 8px 0 var(--ink)}
+.wcl{background:var(--navy)}
+.tag{color:#2A1A12}
+.contact .btn{background:var(--card);color:var(--ink)}
 </style>
 </head>
 <body>
@@ -197,7 +232,7 @@ footer{background:var(--red-dark);color:#FFDCD8;font-size:14px;padding:20px 0 ca
   <div class="wrap">
     <a class="brand" href="#top"><span class="ball" aria-hidden="true"></span>Quora Kagaj</a>
     <div class="links"><a href="#tv">On TV</a><a href="#reels">Reels</a><a href="#library">Media</a><a href="#events">Events</a><a href="#packages">Packages</a></div>
-    <a class="btn btn-red" href="https://wa.me/917803157109">Partner with me</a>
+    <a data-goatcounter-click="whatsapp" class="btn btn-red" href="https://wa.me/917803157109">Partner with me</a>
   </div>
 </nav>
 
@@ -208,8 +243,8 @@ footer{background:var(--red-dark);color:#FFDCD8;font-size:14px;padding:20px 0 ca
       <h1>More reach.<span>Real matchday moments.</span></h1>
       <p>Matchday reels, player moments and fan culture from the UAE’s biggest cricket events, filmed on-ground at Dubai International Stadium and beyond.</p>
       <div class="ctas">
-        <a class="btn btn-red" href="https://wa.me/917803157109">Discuss a sponsorship</a>
-        <a class="btn btn-line" href="https://www.instagram.com/quora_kagaj/">@quora_kagaj ↗</a>
+        <a data-goatcounter-click="whatsapp" class="btn btn-red" href="https://wa.me/917803157109">Discuss a sponsorship</a>
+        <a data-goatcounter-click="instagram-profile" class="btn btn-line" href="https://www.instagram.com/quora_kagaj/">@quora_kagaj ↗</a>
       </div>
     </div>
     <figure class="hero-photo"><img src="hero.jpg" alt="The creator in the stands at Dubai International Stadium"><figcaption>Dubai International Stadium</figcaption></figure>
@@ -231,7 +266,7 @@ footer{background:var(--red-dark);color:#FFDCD8;font-size:14px;padding:20px 0 ca
       <figure class="tv-card"><video src="tv-sony-sports-celebration.mp4" poster="poster-tv-sony-sports-celebration.jpg" controls playsinline preload="none"></video>
         <figcaption><span class="live">Live on TV</span><span class="outlet">Sony Sports</span><b>Celebrating on the broadcast</b><span>Crowd reaction shown during Women’s Asia Cup 2026 coverage.</span></figcaption></figure>
       <figure class="tv-card"><video src="tv-india-pakistan-hug.mp4" poster="poster-tv-india-pakistan-hug.jpg" controls playsinline preload="none"></video>
-        <figcaption><span class="live">Live on TV</span><span class="outlet">Broadcast moment</span><b>Hugging a Pakistan fan</b><span>An India and Pakistan fan moment in the stands, caught on the live broadcast.</span><a href="https://www.instagram.com/reel/DOvwW5ODQkk/">Watch the reel ↗</a></figcaption></figure>
+        <figcaption><span class="live">Live on TV</span><span class="outlet">Broadcast moment</span><b>Hugging a Pakistan fan</b><span>An India and Pakistan fan moment in the stands, caught on the live broadcast.</span><a data-goatcounter-click="instagram-reel" href="https://www.instagram.com/reel/DOvwW5ODQkk/">Watch the reel ↗</a></figcaption></figure>
       <figure class="tv-card"><img src="tv-sony-sports.jpg" alt="The creator in a tricolour headband on the Women’s Asia Cup broadcast" loading="lazy">
         <figcaption><span class="outlet">Asian Cricket Council</span><b>Official match highlights</b><span>The same crowd shot features in the ACC’s official semi-final highlights on YouTube.</span></figcaption></figure>
       <figure class="tv-card"><video src="indian-cricket-team-feature.mp4" poster="poster-indian-cricket-team.jpg" controls playsinline preload="none"></video>
@@ -252,7 +287,7 @@ footer{background:var(--red-dark);color:#FFDCD8;font-size:14px;padding:20px 0 ca
         <div><b>India vs Pakistan</b><span>10 October</span></div>
       </div>
       <p>Season 3 content is already in production. Place your brand inside the biggest fixture of the season with matchday reels, stories and fan moments from the stands.</p>
-      <a class="btn btn-light" href="https://wa.me/917803157109">Sponsor WCL Season 3 coverage</a>
+      <a data-goatcounter-click="whatsapp" class="btn btn-light" href="https://wa.me/917803157109">Sponsor WCL Season 3 coverage</a>
     </div>
   </div>
 </section>
@@ -274,8 +309,8 @@ footer{background:var(--red-dark);color:#FFDCD8;font-size:14px;padding:20px 0 ca
 <section class="alt" id="reels" aria-labelledby="reels-h">
   <div class="wrap">
     <div class="head"><div><h2 class="h2" id="reels-h">Top reels</h2><p class="sub">The moments cricket fans shared most. Each opens on Instagram.</p></div></div>
-    <div class="reels"><a class="reel" href="https://www.instagram.com/quora_kagaj/reels/"><figure><img src="reel-13m.jpg" alt="An India Women player pitch-side" loading="lazy"><span class="badge">13M views</span></figure><div class="reel-t"><b>Pitch-side selfie moment</b><span aria-hidden="true">↗</span></div></a><a class="reel" href="https://www.instagram.com/quora_kagaj/reels/"><figure><img src="reel-4-4m.jpg" alt="Victory dance outside the team bus" loading="lazy"><span class="badge">4.4M views</span></figure><div class="reel-t"><b>Victory dance after India’s title win</b><span aria-hidden="true">↗</span></div></a><a class="reel" href="https://www.instagram.com/quora_kagaj/reels/"><figure><img src="reel-3-1m.jpg" alt="A Pakistan fan dancing in the stands" loading="lazy"><span class="badge">3.1M views</span></figure><div class="reel-t"><b>Pakistan fan dancing to Bhojpuri beats</b><span aria-hidden="true">↗</span></div></a><a class="reel" href="https://www.instagram.com/quora_kagaj/reels/"><figure><img src="reel-2-7m.jpg" alt="An India player on the field before a match" loading="lazy"><span class="badge">2.7M views</span></figure><div class="reel-t"><b>Hardik dancing to a Punjabi song</b><span aria-hidden="true">↗</span></div></a><a class="reel" href="https://www.instagram.com/quora_kagaj/reels/"><figure><img src="reel-1-1m.jpg" alt="A Pakistan Women player smiling in front of fans" loading="lazy"><span class="badge">1.1M views</span></figure><div class="reel-t"><b>Before the match, India vs Pakistan</b><span aria-hidden="true">↗</span></div></a><a class="reel" href="https://www.instagram.com/quora_kagaj/reels/"><figure><img src="reel-trophy-ceremony.jpg" alt="Trophy ceremony on the field at Dubai International Stadium" loading="lazy"><span class="badge">104K likes</span></figure><div class="reel-t"><b>Women’s Asia Cup trophy ceremony</b><span aria-hidden="true">↗</span></div></a></div>
-    <p class="more">Also: a 7M-view reel, “From Chhath ghat to Dubai stadium”, and a 1M-view Team India trophy celebration. <a href="https://www.instagram.com/reel/DdPmmCutByI/" style="color:var(--red);font-weight:700">Watch the latest reel ↗</a></p>
+    <div class="reels"><a data-goatcounter-click="instagram-reel" class="reel" href="https://www.instagram.com/quora_kagaj/reels/"><figure><img src="reel-13m.jpg" alt="An India Women player pitch-side" loading="lazy"><span class="badge">13M views</span></figure><div class="reel-t"><b>Pitch-side selfie moment</b><span aria-hidden="true">↗</span></div></a><a data-goatcounter-click="instagram-reel" class="reel" href="https://www.instagram.com/quora_kagaj/reels/"><figure><img src="reel-4-4m.jpg" alt="Victory dance outside the team bus" loading="lazy"><span class="badge">4.4M views</span></figure><div class="reel-t"><b>Victory dance after India’s title win</b><span aria-hidden="true">↗</span></div></a><a data-goatcounter-click="instagram-reel" class="reel" href="https://www.instagram.com/quora_kagaj/reels/"><figure><img src="reel-3-1m.jpg" alt="A Pakistan fan dancing in the stands" loading="lazy"><span class="badge">3.1M views</span></figure><div class="reel-t"><b>Pakistan fan dancing to Bhojpuri beats</b><span aria-hidden="true">↗</span></div></a><a data-goatcounter-click="instagram-reel" class="reel" href="https://www.instagram.com/quora_kagaj/reels/"><figure><img src="reel-2-7m.jpg" alt="An India player on the field before a match" loading="lazy"><span class="badge">2.7M views</span></figure><div class="reel-t"><b>Hardik dancing to a Punjabi song</b><span aria-hidden="true">↗</span></div></a><a data-goatcounter-click="instagram-reel" class="reel" href="https://www.instagram.com/quora_kagaj/reels/"><figure><img src="reel-1-1m.jpg" alt="A Pakistan Women player smiling in front of fans" loading="lazy"><span class="badge">1.1M views</span></figure><div class="reel-t"><b>Before the match, India vs Pakistan</b><span aria-hidden="true">↗</span></div></a><a data-goatcounter-click="instagram-reel" class="reel" href="https://www.instagram.com/quora_kagaj/reels/"><figure><img src="reel-trophy-ceremony.jpg" alt="Trophy ceremony on the field at Dubai International Stadium" loading="lazy"><span class="badge">104K likes</span></figure><div class="reel-t"><b>Women’s Asia Cup trophy ceremony</b><span aria-hidden="true">↗</span></div></a></div>
+    <p class="more">Also: a 7M-view reel, “From Chhath ghat to Dubai stadium”, and a 1M-view Team India trophy celebration. <a data-goatcounter-click="instagram-reel" href="https://www.instagram.com/reel/DdPmmCutByI/" style="color:var(--red);font-weight:700">Watch the latest reel ↗</a></p>
   </div>
 </section>
 
@@ -394,11 +429,11 @@ footer{background:var(--red-dark);color:#FFDCD8;font-size:14px;padding:20px 0 ca
     <div>
       <h2 class="h2" id="ct-h">Put your brand<br>on the pitch</h2>
       <div class="cgrid">
-        <div><small>Email</small><a href="mailto:asktokumarvivek@gmail.com">asktokumarvivek@gmail.com</a></div>
-        <div><small>Mobile</small><a href="tel:+971526603445">+971 52 660 3445</a></div>
-        <div><small>WhatsApp</small><a href="https://wa.me/917803157109">+91 78031 57109</a></div>
-        <div><small>Instagram</small><a href="https://www.instagram.com/quora_kagaj/">@quora_kagaj</a></div>
-        <div><small>LinkedIn</small><a href="https://www.linkedin.com/in/vivek-kumar-69685112b/">View profile</a></div>
+        <div><small>Email</small><a data-goatcounter-click="email" href="mailto:asktokumarvivek@gmail.com">asktokumarvivek@gmail.com</a></div>
+        <div><small>Mobile</small><a data-goatcounter-click="call" href="tel:+971526603445">+971 52 660 3445</a></div>
+        <div><small>WhatsApp</small><a data-goatcounter-click="whatsapp" href="https://wa.me/917803157109">+91 78031 57109</a></div>
+        <div><small>Instagram</small><a data-goatcounter-click="instagram-profile" href="https://www.instagram.com/quora_kagaj/">@quora_kagaj</a></div>
+        <div><small>LinkedIn</small><a data-goatcounter-click="linkedin" href="https://www.linkedin.com/in/vivek-kumar-69685112b/">View profile</a></div>
         <div><small>Office</small><p>Anantara Business Tower, Business Bay, Dubai</p></div>
       </div>
     </div>
@@ -424,5 +459,6 @@ footer{background:var(--red-dark);color:#FFDCD8;font-size:14px;padding:20px 0 ca
   });
 })();
 </script>
+<script data-goatcounter="https://quorakagaj.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
