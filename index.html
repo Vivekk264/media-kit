@@ -224,6 +224,54 @@ h1,.h2,.hero h1,.feature h3,.ev h3,.pkg h3,.bg h3,.trio b,.stat b,.badge,.brand{
 .wcl{background:var(--navy)}
 .tag{color:#2A1A12}
 .contact .btn{background:var(--card);color:var(--ink)}
+
+/* hero B */
+.hero{padding:56px 0 88px}
+.hero-grid{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)!important;gap:56px!important}
+.hero h1{margin:22px 0 18px}
+.hero p{margin:0 0 26px}
+.socials{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+.socials .btn svg{width:20px;height:20px}
+.kpi{background:var(--card);border:2px solid var(--ink);box-shadow:6px 6px 0 var(--ink);border-radius:18px;padding:18px 20px}
+.kpi-head{display:flex;justify-content:space-between;font-weight:700;font-size:14px;color:var(--muted);margin-bottom:10px}
+.live-dot{display:inline-flex;align-items:center;gap:6px}
+.live-dot::before{content:"";width:8px;height:8px;border-radius:50%;background:#2F8F4E}
+.kpi-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.kpi-row div{padding:4px 14px}
+.kpi-row div:first-child{padding-left:0}
+.kpi-row div+div{border-left:1.5px solid var(--line)}
+.kpi-row b{display:block;font-family:var(--display);font-weight:900;letter-spacing:-.035em;font-size:clamp(30px,3.4vw,44px);line-height:1}
+.kpi-row span{display:block;margin-top:6px;font-size:13px;line-height:1.3;font-weight:600;color:var(--muted)}
+.kpi-row .viral b{color:var(--red)}
+.show{position:relative}
+.slides{position:relative;aspect-ratio:4/5;border:2px solid var(--ink);box-shadow:8px 8px 0 var(--ink);border-radius:22px;overflow:hidden;background:var(--navy)}
+.slide{position:absolute;inset:0;margin:0;opacity:0;transition:opacity .9s ease}
+.slide.on{opacity:1}
+.slide img,.slide video{width:100%;height:100%;object-fit:cover}
+.slide.on img{animation:kb 6s ease-out both}
+@keyframes kb{from{transform:scale(1.08)}to{transform:scale(1)}}
+.slide figcaption{position:absolute;left:14px;bottom:14px;right:14px;width:max-content;max-width:calc(100% - 28px);background:var(--card);color:var(--ink);border:1.5px solid var(--ink);font-weight:700;font-size:14px;padding:7px 13px;border-radius:999px}
+.dots{display:flex;gap:8px;justify-content:center;margin-top:20px}
+.dots button{width:12px;height:12px;border-radius:50%;border:2px solid var(--ink);background:transparent;padding:0;cursor:pointer}
+.dots button[aria-current="true"]{background:var(--red);width:28px;border-radius:99px}
+.dots button:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr!important}.show{max-width:460px;width:100%;margin-inline:auto}}
+@media (max-width:520px){.kpi-row div{padding:4px 8px}.kpi-row span{font-size:12px}}
+@media (prefers-reduced-motion:reduce){.slide{transition:none}.slide.on img{animation:none}}
+.m .stats{display:flex;gap:10px;margin-top:4px;font-size:13px;font-weight:700;color:var(--red)}
+
+.hero h1{font-size:clamp(44px,5.8vw,82px)}
+.brand{white-space:nowrap}
+.nav .btn{white-space:nowrap}
+@media (max-width:520px){
+  .brand{font-size:21px}
+  .nav .btn{min-height:40px;padding:0 14px;font-size:14px}
+  .socials{gap:8px}
+  .socials .btn{min-height:44px;padding:0 14px;font-size:14px;gap:6px}
+  .socials .btn svg{width:17px;height:17px}
+  .kpi{padding:14px}
+  .kpi-row b{font-size:26px}
+}
 </style>
 </head>
 <body>
@@ -238,21 +286,37 @@ h1,.h2,.hero h1,.feature h3,.ev h3,.pkg h3,.bg h3,.trio b,.stat b,.badge,.brand{
 
 <header class="hero" id="top">
   <div class="wrap hero-grid">
-    <div>
+    <div class="hero-copy">
       <span class="kicker"><i aria-hidden="true"></i>Cricket content creator, Dubai</span>
       <h1>More reach.<span>Real matchday moments.</span></h1>
       <p>Matchday reels, player moments and fan culture from the UAE’s biggest cricket events, filmed on-ground at Dubai International Stadium and beyond.</p>
-      <div class="ctas">
-        <a data-goatcounter-click="whatsapp" class="btn btn-red" href="https://wa.me/917803157109">Discuss a sponsorship</a>
-        <a data-goatcounter-click="instagram-profile" class="btn btn-line" href="https://www.instagram.com/quora_kagaj/">@quora_kagaj ↗</a>
+      <div class="socials">
+        <a data-goatcounter-click="whatsapp" class="btn btn-red" href="https://wa.me/917803157109"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 1a4 4 0 0 1-2.4-2.4l1-1-1-2L9.5 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>WhatsApp</a>
+        <a data-goatcounter-click="instagram-profile" class="btn btn-line" href="https://www.instagram.com/quora_kagaj/"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>@quora_kagaj</a>
+        <a data-goatcounter-click="linkedin" class="btn btn-line" href="https://www.linkedin.com/in/vivek-kumar-69685112b/"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>LinkedIn</a>
+      </div>
+      <div class="kpi" aria-label="Key numbers">
+        <div class="kpi-head"><span>Creator insights</span><span class="live-dot">Last 30 days</span></div>
+        <div class="kpi-row">
+          <div><b>131</b><span>Posts and reels</span></div>
+          <div><b>28.8M</b><span>Views reached</span></div>
+          <div class="viral"><b>13M</b><span>Most viral reel</span></div>
+        </div>
       </div>
     </div>
-    <figure class="hero-photo"><img src="hero.jpg" alt="The creator in the stands at Dubai International Stadium"><figcaption>Dubai International Stadium</figcaption></figure>
-  </div>
-  <div class="wrap trio">
-    <div><b>28.8M</b><span>views in the last 30 days</span></div>
-    <div><b>13M</b><span>views on a single reel</span></div>
-    <div><b>10.2K</b><span>Instagram followers</span></div>
+    <div class="show" aria-roledescription="carousel" aria-label="Matchday highlights">
+      <div class="slides">
+        <figure class="slide on"><video src="hero-fireworks.mp4" poster="poster-hero-fireworks.jpg" muted playsinline preload="metadata"></video><figcaption>Fireworks over Dubai International Stadium</figcaption></figure>
+        <figure class="slide"><img src="hero-steps.jpg" alt="The creator on the stadium steps with the pitch behind"><figcaption>On-ground, Block 127</figcaption></figure>
+        <figure class="slide"><video src="hero-crowd.mp4" poster="poster-hero-crowd.jpg" muted playsinline preload="none"></video><figcaption>A packed house on matchday</figcaption></figure>
+        <figure class="slide"><img src="gallery-g1.jpg" alt="Selfie with fans and an India Women player at the boundary"><figcaption>Pitch-side with the players · 298K views</figcaption></figure>
+        <figure class="slide"><img src="hero-smile.jpg" alt="The creator smiling with the pitch behind"><figcaption>Dubai International Stadium</figcaption></figure>
+        <figure class="slide"><video src="hero-floodlights.mp4" poster="poster-hero-floodlights.jpg" muted playsinline preload="none"></video><figcaption>Under the floodlights</figcaption></figure>
+        <figure class="slide"><img src="virat-autograph-jersey.jpg" alt="India jersey signed by Virat Kohli"><figcaption>Signed by Virat Kohli</figcaption></figure>
+        <figure class="slide"><img src="hero-sky.jpg" alt="The creator in the stands under the stadium roof"><figcaption>Home ground, Dubai</figcaption></figure>
+      </div>
+      <div class="dots" role="group" aria-label="Choose slide"></div>
+    </div>
   </div>
 </header>
 
@@ -309,7 +373,7 @@ h1,.h2,.hero h1,.feature h3,.ev h3,.pkg h3,.bg h3,.trio b,.stat b,.badge,.brand{
 <section class="alt" id="reels" aria-labelledby="reels-h">
   <div class="wrap">
     <div class="head"><div><h2 class="h2" id="reels-h">Top reels</h2><p class="sub">The moments cricket fans shared most. Each opens on Instagram.</p></div></div>
-    <div class="reels"><a data-goatcounter-click="instagram-reel" class="reel" href="https://www.instagram.com/quora_kagaj/reels/"><figure><img src="reel-13m.jpg" alt="An India Women player pitch-side" loading="lazy"><span class="badge">13M views</span></figure><div class="reel-t"><b>Pitch-side selfie moment</b><span aria-hidden="true">↗</span></div></a><a data-goatcounter-click="instagram-reel" class="reel" href="https://www.instagram.com/quora_kagaj/reels/"><figure><img src="reel-4-4m.jpg" alt="Victory dance outside the team bus" loading="lazy"><span class="badge">4.4M views</span></figure><div class="reel-t"><b>Victory dance after India’s title win</b><span aria-hidden="true">↗</span></div></a><a data-goatcounter-click="instagram-reel" class="reel" href="https://www.instagram.com/quora_kagaj/reels/"><figure><img src="reel-3-1m.jpg" alt="A Pakistan fan dancing in the stands" loading="lazy"><span class="badge">3.1M views</span></figure><div class="reel-t"><b>Pakistan fan dancing to Bhojpuri beats</b><span aria-hidden="true">↗</span></div></a><a data-goatcounter-click="instagram-reel" class="reel" href="https://www.instagram.com/quora_kagaj/reels/"><figure><img src="reel-2-7m.jpg" alt="An India player on the field before a match" loading="lazy"><span class="badge">2.7M views</span></figure><div class="reel-t"><b>Hardik dancing to a Punjabi song</b><span aria-hidden="true">↗</span></div></a><a data-goatcounter-click="instagram-reel" class="reel" href="https://www.instagram.com/quora_kagaj/reels/"><figure><img src="reel-1-1m.jpg" alt="A Pakistan Women player smiling in front of fans" loading="lazy"><span class="badge">1.1M views</span></figure><div class="reel-t"><b>Before the match, India vs Pakistan</b><span aria-hidden="true">↗</span></div></a><a data-goatcounter-click="instagram-reel" class="reel" href="https://www.instagram.com/quora_kagaj/reels/"><figure><img src="reel-trophy-ceremony.jpg" alt="Trophy ceremony on the field at Dubai International Stadium" loading="lazy"><span class="badge">104K likes</span></figure><div class="reel-t"><b>Women’s Asia Cup trophy ceremony</b><span aria-hidden="true">↗</span></div></a></div>
+    <div class="reels"><a data-goatcounter-click="instagram-reel" class="reel" href="https://www.instagram.com/quora_kagaj/reels/"><figure><img src="reel-13m.jpg" alt="An India Women player pitch-side" loading="lazy"><span class="badge">13M views</span></figure><div class="reel-t"><b>Pitch-side selfie moment</b><span aria-hidden="true">↗</span></div></a><a data-goatcounter-click="instagram-reel" class="reel" href="https://www.instagram.com/quora_kagaj/reels/"><figure><img src="reel-4-4m.jpg" alt="Victory dance outside the team bus" loading="lazy"><span class="badge">4.4M views</span></figure><div class="reel-t"><b>Victory dance after India’s title win</b><span aria-hidden="true">↗</span></div></a><a data-goatcounter-click="instagram-reel" class="reel" href="https://www.instagram.com/quora_kagaj/reels/"><figure><img src="reel-3-1m.jpg" alt="A Pakistan fan dancing in the stands" loading="lazy"><span class="badge">3.1M views</span></figure><div class="reel-t"><b>Pakistan fan dancing to Bhojpuri beats</b><span aria-hidden="true">↗</span></div></a><a data-goatcounter-click="instagram-reel" class="reel" href="https://www.instagram.com/quora_kagaj/reels/"><figure><img src="reel-2-7m.jpg" alt="An India player on the field before a match" loading="lazy"><span class="badge">2.7M views</span></figure><div class="reel-t"><b>Hardik dancing to a Punjabi song</b><span aria-hidden="true">↗</span></div></a><a data-goatcounter-click="instagram-reel" class="reel" href="https://www.instagram.com/quora_kagaj/reels/"><figure><img src="reel-1-1m.jpg" alt="A Pakistan Women player smiling in front of fans" loading="lazy"><span class="badge">1.1M views</span></figure><div class="reel-t"><b>Before the match, India vs Pakistan · 21.5K likes</b><span aria-hidden="true">↗</span></div></a><a data-goatcounter-click="instagram-reel" class="reel" href="https://www.instagram.com/quora_kagaj/reels/"><figure><img src="reel-trophy-ceremony.jpg" alt="Trophy ceremony on the field at Dubai International Stadium" loading="lazy"><span class="badge">104K likes</span></figure><div class="reel-t"><b>Women’s Asia Cup trophy ceremony</b><span aria-hidden="true">↗</span></div></a></div>
     <p class="more">Also: a 7M-view reel, “From Chhath ghat to Dubai stadium”, and a 1M-view Team India trophy celebration. <a data-goatcounter-click="instagram-reel" href="https://www.instagram.com/reel/DdPmmCutByI/" style="color:var(--red);font-weight:700">Watch the latest reel ↗</a></p>
   </div>
 </section>
@@ -324,34 +388,42 @@ h1,.h2,.hero h1,.feature h3,.ev h3,.pkg h3,.bg h3,.trio b,.stat b,.badge,.brand{
       <div><span class="tag" style="margin:0;align-self:flex-start">Highlight</span><h3>Signed by Virat Kohli</h3><p>An India jersey and a cap, both autographed by Virat Kohli in Dubai.</p></div>
     </div>
     <div class="chips" role="group" aria-label="Filter media">
-      <button class="chip" type="button" data-filter="all" aria-pressed="true">All <small>24</small></button>
-      <button class="chip" type="button" data-filter="players" aria-pressed="false">Player moments <small>12</small></button>
-      <button class="chip" type="button" data-filter="fans" aria-pressed="false">Fans <small>7</small></button>
-      <button class="chip" type="button" data-filter="events" aria-pressed="false">Events <small>3</small></button>
+      <button class="chip" type="button" data-filter="all" aria-pressed="true">All <small>32</small></button>
+      <button class="chip" type="button" data-filter="players" aria-pressed="false">Player moments <small>15</small></button>
+      <button class="chip" type="button" data-filter="fans" aria-pressed="false">Fans <small>10</small></button>
+      <button class="chip" type="button" data-filter="events" aria-pressed="false">Events <small>5</small></button>
       <button class="chip" type="button" data-filter="press" aria-pressed="false">Press <small>2</small></button>
     </div>
     <div class="media" id="media">
+<figure class="m" data-cat="players"><img src="gallery-g1.jpg" alt="Selfie with fans and an India Women player at the boundary" loading="lazy"><figcaption><b>With the players at the boundary</b><span class="stats"><span>298K views</span><span>37.7K likes</span></span></figcaption></figure>
+<figure class="m" data-cat="players"><img src="gallery-g2.jpg" alt="Smriti Mandhana and Harmanpreet Kaur with fans at the stadium fence" loading="lazy"><figcaption><b>Meeting Smriti Mandhana and Harmanpreet Kaur</b><span class="stats"><span>33.9K views</span><span>4,072 likes</span></span></figcaption></figure>
 <figure class="m" data-cat="players"><video src="player-autograph-jersey.mp4" poster="poster-player-autograph-jersey.jpg" controls playsinline preload="none"></video><figcaption><b>Jersey autograph</b><span>An India Women player signs at the boundary</span></figcaption></figure>
-<figure class="m" data-cat="players"><img src="player-selfie-crowd.jpg" alt="Selfie with an India Women player in front of the fan stand" loading="lazy"><figcaption><b>Selfie with the fan stand</b></figcaption></figure>
+<figure class="m" data-cat="players"><img src="player-selfie-crowd.jpg" alt="Selfie with an India Women player in front of the fan stand" loading="lazy"><figcaption><b>Selfie with the fan stand</b><span class="stats"><span>16K views</span><span>2,007 likes</span></span></figcaption></figure>
 <figure class="m" data-cat="players"><video src="player-signs-cap.mp4" poster="poster-player-signs-cap.jpg" controls playsinline preload="none"></video><figcaption><b>Signed cap</b><span>A player signs a cap pitch-side</span></figcaption></figure>
-<figure class="m" data-cat="players"><img src="player-selfie-fans.jpg" alt="Selfie with an India Women player at the stadium fence" loading="lazy"><figcaption><b>Pitch-side selfie</b></figcaption></figure>
+<figure class="m" data-cat="players"><img src="player-selfie-fans.jpg" alt="Selfie with an India Women player at the stadium fence" loading="lazy"><figcaption><b>Pitch-side selfie</b><span class="stats"><span>77.1K views</span><span>4,699 likes</span></span></figcaption></figure>
 <figure class="m" data-cat="players"><video src="player-autographs-boundary.mp4" poster="poster-player-autographs-boundary.jpg" controls playsinline preload="none"></video><figcaption><b>Autographs at the boundary</b><span>Players meet fans after the match</span></figcaption></figure>
 <figure class="m" data-cat="players"><img src="player-autograph-phone.jpg" alt="A player signs a phone case" loading="lazy"><figcaption><b>Autograph on a phone case</b></figcaption></figure>
 <figure class="m" data-cat="players"><video src="player-autograph-notebook.mp4" poster="poster-player-autograph-notebook.jpg" controls playsinline preload="none"></video><figcaption><b>Notebook autograph</b><span>Signing session after the game</span></figcaption></figure>
-<figure class="m" data-cat="players"><img src="gallery-g1.jpg" alt="Selfie with fans and an India Women player at the boundary" loading="lazy"><figcaption><b>With the players at the boundary</b></figcaption></figure>
 <figure class="m" data-cat="players"><video src="player-selfie.mp4" poster="poster-player-selfie.jpg" controls playsinline preload="none"></video><figcaption><b>Player selfie</b><span>A quick moment with Team India</span></figcaption></figure>
 <figure class="m" data-cat="players"><video src="bat-signing.mp4" poster="poster-bat-signing.jpg" controls playsinline preload="none"></video><figcaption><b>Bat signing</b><span>Autographs at the team exit</span></figcaption></figure>
-<figure class="m" data-cat="players"><img src="gallery-g2.jpg" alt="An India Women player with fans at the stadium fence" loading="lazy"><figcaption><b>Up close at the fence</b></figcaption></figure>
+<figure class="m" data-cat="players"><video src="player-signing-night.mp4" poster="poster-player-signing-night.jpg" controls playsinline preload="none"></video><figcaption><b>Signing at the team exit</b><span>A player meets fans after the night match</span></figcaption></figure>
+<figure class="m" data-cat="players"><video src="team-bus-autograph.mp4" poster="poster-team-bus-autograph.jpg" controls playsinline preload="none"></video><figcaption><b>Autographs by the team bus</b><span>Matchday night access</span></figcaption></figure>
+<figure class="m" data-cat="players"><img src="signed-bat.jpg" alt="A signed cricket bat held up in the stadium" loading="lazy"><figcaption><b>Signed bat in the stands</b></figcaption></figure>
 <figure class="m" data-cat="players"><img src="gallery-g5.jpg" alt="With a cricket personality" loading="lazy"><figcaption><b>Meeting cricket personalities</b></figcaption></figure>
 <figure class="m" data-cat="fans"><video src="fans-together.mp4" poster="poster-fans-together.jpg" controls playsinline preload="none"></video><figcaption><b>India and Pakistan fans together</b><span>In the stands, one crowd</span></figcaption></figure>
 <figure class="m" data-cat="fans"><img src="gallery-g3.jpg" alt="India and Pakistan fans celebrating in the stands" loading="lazy"><figcaption><b>Where the crowd lives</b></figcaption></figure>
 <figure class="m" data-cat="fans"><img src="gallery-g4.jpg" alt="An India fan and a Pakistan fan side by side" loading="lazy"><figcaption><b>Rivals in the same frame</b></figcaption></figure>
 <figure class="m" data-cat="fans"><video src="flag-crowd.mp4" poster="poster-flag-crowd.jpg" controls playsinline preload="none"></video><figcaption><b>Flags outside the stadium</b><span>Pre-match atmosphere</span></figcaption></figure>
+<figure class="m" data-cat="fans"><video src="crowd-six-card.mp4" poster="poster-crowd-six-card.jpg" controls playsinline preload="none"></video><figcaption><b>Sixes and signs</b><span>The crowd at full volume</span></figcaption></figure>
+<figure class="m" data-cat="fans"><img src="fans-celebration.jpg" alt="The creator celebrating in the packed stands" loading="lazy"><figcaption><b>Celebrating with the crowd</b></figcaption></figure>
+<figure class="m" data-cat="fans"><img src="fans-flags-together.jpg" alt="India and Pakistan fans holding flags together" loading="lazy"><figcaption><b>Two flags, one frame</b></figcaption></figure>
 <figure class="m" data-cat="fans"><img src="fans-stands.jpg" alt="India fans with the tricolour in the stands" loading="lazy"><figcaption><b>With the India fan army</b></figcaption></figure>
 <figure class="m" data-cat="fans"><img src="fans-outside.jpg" alt="India and Pakistan fans with flags outside the stadium" loading="lazy"><figcaption><b>Matchday outside the gates</b></figcaption></figure>
 <figure class="m" data-cat="fans"><img src="matchball.jpg" alt="Holding a cricket ball in the stands" loading="lazy"><figcaption><b>A souvenir from the stands</b></figcaption></figure>
 <figure class="m" data-cat="events"><img src="ipl-auction-sign.jpg" alt="IPL Auction sign outside Coca-Cola Arena" loading="lazy"><figcaption><b>IPL Auction, Coca-Cola Arena</b></figcaption></figure>
 <figure class="m" data-cat="events"><img src="ipl-auction-arena.jpg" alt="Outside the IPL Auction venue" loading="lazy"><figcaption><b>Red carpet at the IPL Auction</b></figcaption></figure>
+<figure class="m" data-cat="events"><img src="hero-flag-cape.jpg" alt="The creator wearing the India flag on the stadium steps" loading="lazy"><figcaption><b>Flag on the stadium steps</b></figcaption></figure>
+<figure class="m" data-cat="events"><img src="stadium-thumbs-up.jpg" alt="Thumbs up with the pitch behind" loading="lazy"><figcaption><b>Matchday at Dubai International Stadium</b></figcaption></figure>
 <figure class="m" data-cat="events"><img src="icc-academy.jpg" alt="At the ICC Academy wall" loading="lazy"><figcaption><b>ICC Academy, Dubai</b></figcaption></figure>
 <figure class="m" data-cat="press"><video src="media-interview.mp4" poster="poster-media-interview.jpg" controls playsinline preload="none"></video><figcaption><b>Interviewed by PTI</b><span>Speaking to the press outside the stadium</span></figcaption></figure>
 <figure class="m" data-cat="press"><video src="on-mic.mp4" poster="poster-on-mic.jpg" controls playsinline preload="none"></video><figcaption><b>On the mic</b><span>Matchday interview at the venue</span></figcaption></figure>
@@ -442,6 +514,25 @@ h1,.h2,.hero h1,.feature h3,.ev h3,.pkg h3,.bg h3,.trio b,.stat b,.badge,.brand{
 </section>
 <footer><div class="wrap">Quora Kagaj, cricket content creator. Available across UAE cricket venues.</div></footer>
 
+<script>
+(function(){
+  var root=document.querySelector('.show'); if(!root) return;
+  var slides=[].slice.call(root.querySelectorAll('.slide')), dots=root.querySelector('.dots');
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var i=0,t=null,DWELL=5000;
+  slides.forEach(function(s,k){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Show slide '+(k+1));b.addEventListener('click',function(){go(k,true)});dots.appendChild(b)});
+  function go(k,user){
+    clearTimeout(t); var prev=slides[i]; var pv=prev.querySelector('video'); if(pv) pv.pause();
+    prev.classList.remove('on'); i=(k+slides.length)%slides.length; var cur=slides[i]; cur.classList.add('on');
+    [].forEach.call(dots.children,function(d,n){d.setAttribute('aria-current',n===i?'true':'false')});
+    var v=cur.querySelector('video');
+    if(v){ v.preload='auto'; try{v.currentTime=0}catch(e){} var p=v.play(); if(p&&p.catch)p.catch(function(){}); }
+    if(!reduce) t=setTimeout(function(){go(i+1)}, v?6000:DWELL);
+  }
+  go(0);
+  document.addEventListener('visibilitychange',function(){ if(document.hidden){clearTimeout(t)} else if(!reduce){go(i)} });
+})();
+</script>
 <script>
 (function(){
   var chips=document.querySelectorAll('.chip');
